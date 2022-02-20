@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+
+  shop:
+    image: dockware/flex:latest
+    container_name: plugin
+    volumes:
+      - '.:/var/www/html'
