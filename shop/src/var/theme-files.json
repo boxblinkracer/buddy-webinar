@@ -1,0 +1,26 @@
+{
+    "script": [
+        {
+            "filepath": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/src\/main.js",
+            "resolveMapping": [],
+            "extensions": []
+        }
+    ],
+    "style": [
+        {
+            "filepath": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/src\/scss\/base.scss",
+            "resolveMapping": {
+                "vendor": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/vendor"
+            },
+            "extensions": []
+        },
+        {
+            "filepath": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/src\/scss\/skin\/shopware\/_base.scss",
+            "resolveMapping": {
+                "vendor": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/vendor"
+            },
+            "extensions": []
+        }
+    ],
+    "basePath": "vendor\/shopware\/storefront\/Resources"
+}
