@@ -1,1 +1,0 @@
-# buddy-webinar-shop

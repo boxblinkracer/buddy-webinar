@@ -1,0 +1,13 @@
+
+.DS_Store
+
+/app/vendor
+
+/shop/vendor
+/shop/var/cache/
+/shop/var/log/
+/shop/public/bundles
+/shop/public/sitemap
+/shop/public/theme
+
+
