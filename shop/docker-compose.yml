@@ -10,10 +10,10 @@ services:
       - "22:22"
       - "3306:3306"
     volumes:
-      - "db_volume:/var/lib/mysql"
       - "./src:/var/www/html"
       # excludes
-      # - '/var/www/html/vendor'
+      - '/var/www/html/vendor'
+      - '/var/www/html/var/cache'
 
 volumes:
   db_volume:
