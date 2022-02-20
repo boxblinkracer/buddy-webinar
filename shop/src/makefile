@@ -17,6 +17,9 @@ dev: ## Installs DEV dependencies
 prod: ## Installs PROD dependencies
 	composer install --no-dev --no-scripts
 
+clean: ## Cleans all Dependencies
+	rm -rf vendor/*
+
 build-storefront: ## Builds the Storefront
 	php bin/console theme:compile
 	php bin/console cache:clear
