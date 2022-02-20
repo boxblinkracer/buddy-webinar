@@ -16,8 +16,16 @@ prod: ## Installs all production dependencies
 dev: ## Installs all dev dependencies
 	composer install
 
-test: ## Starts all Tests
+# ------------------------------------------------------------------------------------------------------------
+
+phpunit: ## Starts all PHPUnit Tests
 	php ./vendor/bin/phpunit --configuration=./phpunit.xml
 
 stan: ## Starts the PHPStan Analyser
 	php ./vendor/bin/phpstan --memory-limit=1G analyse .
+
+# ------------------------------------------------------------------------------------------------------------
+
+review ## Starts the full review pipeline
+	make phpunit -B
+	make stan -B
