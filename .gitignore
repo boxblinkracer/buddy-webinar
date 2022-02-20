@@ -1,6 +1,10 @@
 .DS_Store
 .idea
 
+/app/vendor
+
+/plugin/vendor
+/plugin/tests/Cypress/node_modules
 
 /shop/src/vendor
 /shop/src/var/cache
