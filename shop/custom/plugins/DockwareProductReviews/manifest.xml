@@ -24,7 +24,7 @@
     </permissions>
 
     <webhooks>
-        <webhook name="order-placed" event="checkout.order.placed" url="http://server/app/event/order-placed.php"/>
+        <webhook name="order-placed" event="checkout.order.placed" url="https://buddy-ratings.dasistweb.com/app/event/order-placed.php"/>
     </webhooks>
 
 </manifest>
