@@ -6,6 +6,7 @@
 /plugin/vendor
 /plugin/tests/Cypress/node_modules
 
+/shop/src/files
 /shop/src/vendor
 /shop/src/var/theme-variables.scss
 /shop/src/var/cache
