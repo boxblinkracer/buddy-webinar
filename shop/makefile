@@ -29,6 +29,13 @@ run: ## Prepares and runs Shopware
 	docker exec -it shop bash -c 'php bin/console theme:dump'
 	docker exec -it shop bash -c 'php bin/console theme:compile'
 	docker exec -it shop bash -c 'php bin/console cache:clear'
+	# ------------------------------------------------------------------------------------
+	docker exec -it shop bash -c 'php bin/console plugin:refresh'
+	docker exec -it shop bash -c 'php bin/console plugin:uninstall DockwareSamplePlugin'
+	docker exec -it shop bash -c 'php bin/console plugin:install DockwareSamplePlugin --activate' 2> /dev/null || true
+	docker exec -it shop bash -c "php bin/console cache:clear"
+	docker exec -it shop bash -c "php bin/console system:config:set DockwareSamplePlugin.config.active true"
+	# ------------------------------------------------------------------------------------
 	@open http://localhost/admin
 	@open http://localhost
 
