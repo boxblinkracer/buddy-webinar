@@ -20,6 +20,20 @@ prod: ## Installs PROD dependencies
 build-storefront: ## Builds the Storefront
 	php bin/console theme:compile
 	php bin/console cache:clear
+	php bin/console assets:install
 
 build-admin: ## Builds the Administration
 	./bin/build-administration.sh
+	php bin/console assets:install
+
+# ---------------------------------------------------------------------------------------------
+
+review: ## Starts the Test, Analyzers and more
+	echo "starting tests..."
+
+# ---------------------------------------------------------------------------------------------
+
+restart-message-queue: ## Restarts the Message Queue
+	php bin/console messenger:stop-workers
+	php bin/console messenger:consume
+
