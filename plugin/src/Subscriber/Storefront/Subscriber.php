@@ -23,11 +23,7 @@ class Subscriber implements EventSubscriberInterface
      */
     public function onStorefrontRender(StorefrontRenderEvent $event)
     {
-        $data = array(
-            'dockware' => 1,
-        );
-
-        $event->setParameter('dockware', $data);
+        echo "Buddy was here!";
     }
 
 }
