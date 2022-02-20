@@ -20,6 +20,11 @@
                 "vendor": "\/var\/www\/html\/vendor\/shopware\/storefront\/Resources\/app\/storefront\/vendor"
             },
             "extensions": []
+        },
+        {
+            "filepath": "\/var\/www\/html\/custom\/plugins\/DockwareSamplePlugin\/src\/Resources\/app\/storefront\/src\/scss\/base.scss",
+            "resolveMapping": [],
+            "extensions": []
         }
     ],
     "basePath": "vendor\/shopware\/storefront\/Resources"
