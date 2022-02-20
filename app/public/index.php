@@ -26,7 +26,7 @@ if (!empty($orderNumber)) {
 <main class="container">
     <h1>Product Review System</h1>
     <p>
-        Thank you for your order in our dockware shop!<br/>
+        Thank you for your order in our shop!<br/>
         You can now review your products in our external app system.<br/>
         Afterwards you'll be able to see your review in our shop.
     </p>
