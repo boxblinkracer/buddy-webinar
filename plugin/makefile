@@ -26,6 +26,6 @@ stan: ## Starts the PHPStan Analyser
 
 # ------------------------------------------------------------------------------------------------------------
 
-review ## Starts the full review pipeline
+review: ## Starts the full review pipeline
 	make phpunit -B
 	make stan -B
