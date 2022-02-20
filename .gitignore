@@ -13,3 +13,4 @@
 
 /plugin/vendor
 /plugin/tests/Cypress/node_modules
+.idea
