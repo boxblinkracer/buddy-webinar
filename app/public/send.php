@@ -69,7 +69,7 @@ $statusCode = $response[0];
     }
 
 
-    $productURL = 'http://localhost/detail/' . $productId;
+    $productURL = $shop->getShopUrl() . '/detail/' . $productId;
 
     ?>
 
