@@ -11,6 +11,6 @@ class AppData
     /**
      *
      */
-    const APP_SECRET = 'dockware-dev';
+    const APP_SECRET = 'dockware-dev-123';
 
 }
