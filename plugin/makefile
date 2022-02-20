@@ -16,6 +16,9 @@ prod: ## Installs all production dependencies
 dev: ## Installs all dev dependencies
 	composer install
 
+clean: ## Cleans all dependencies
+	rm -rf vendor
+
 # ------------------------------------------------------------------------------------------------------------
 
 phpunit: ## Starts all PHPUnit Tests
