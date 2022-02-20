@@ -28,8 +28,11 @@ build-admin: ## Builds the Administration
 
 # ---------------------------------------------------------------------------------------------
 
+phpunit: ## Starts the PHPUnit Tests
+	./vendor/bin/phpunit --configuration=./custom/plugins/DockwareSamplePlugin/phpunit.xml
+
 review: ## Starts the Test, Analyzers and more
-	echo "starting tests..."
+	make phpunit -B
 
 # ---------------------------------------------------------------------------------------------
 
