@@ -7,7 +7,7 @@
     
     <testsuites>
         <testsuite name="Dockware Sample Plugin Tests">
-            <directory>tests/</directory>
+            <directory>tests/PHPUnit/</directory>
         </testsuite>
     </testsuites>
 
