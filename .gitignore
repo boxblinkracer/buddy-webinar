@@ -11,7 +11,7 @@
 /shop/src/var/cache
 /shop/src/var/log/
 
-/shop/src/public/bundles/
+/shop/src/public/bundles
 /shop/src/public/media
 /shop/src/public/theme
 /shop/src/public/sitemap
