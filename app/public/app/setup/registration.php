@@ -46,7 +46,7 @@ try {
     $responseData = [
         "proof" => $proof,
         "secret" => $shop->getShopSecret(),
-        "confirmation_url" => "http://server/app/setup/confirm.php"
+        "confirmation_url" => "https://buddy-ratings.dasistweb.com/app/setup/confirm.php"
     ];
 
 
