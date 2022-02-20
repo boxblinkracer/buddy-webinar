@@ -11,9 +11,11 @@ services:
       - "3306:3306"
     volumes:
       - "./src:/var/www/html"
-      # excludes
+      # excludes ---------------------------
       - '/var/www/html/vendor'
       - '/var/www/html/var/cache'
+      - '/var/www/html/public/media'
+      - '/var/www/html/public/theme'
 
 volumes:
   db_volume:

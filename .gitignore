@@ -7,6 +7,7 @@
 /plugin/tests/Cypress/node_modules
 
 /shop/src/vendor
+/shop/src/var/theme-variables.scss
 /shop/src/var/cache
 /shop/src/var/log/
 /shop/src/public/media

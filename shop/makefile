@@ -23,12 +23,15 @@ export-db: ## Creates a clean MySQL dump
 # ---------------------------------------------------------------------------------------------
 
 run: ## Prepares and runs Shopware
-	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html/var/cache -R'
-	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html/vendor -R'
+	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html -R'
+	# ------------------------------------------------------------------------------------
 	docker exec -it shop bash -c 'composer install'
 	docker exec -it shop bash -c 'php bin/console theme:compile'
 	docker exec -it shop bash -c 'php bin/console cache:clear'
+	@open http://localhost/admin
+	@open http://localhost
 
+# ---------------------------------------------------------------------------------------------
 
 reset: ## Resets Shopware
 	docker exec -it shop bash -c "mysql -uroot -proot -e \"drop database shopware;\"" 2> /dev/null; true
