@@ -1,11 +1,14 @@
-<Files ~ ".*">
-    # Deny all requests from Apache 2.4+.
-    <IfModule mod_authz_core.c>
-          Require all denied
-    </IfModule>
+DirectoryIndex index.html index.php
 
-    # Deny all requests from Apache 2.0-2.2.
-    <IfModule !mod_authz_core.c>
-        Deny from all
-    </IfModule>
-</Files>
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+<IfModule mod_alias.c>
+    # Restrict access to VCS directories
+    RedirectMatch 404 /\\.(svn|git|hg|bzr|cvs)(/|$)
+
+    # Restrict access to root folder files
+    RedirectMatch 404 /(composer\.(json|lock|phar)|README\.md|\.gitignore|.*\.dist|\.env.*)$
+</IfModule>
+

@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+  shopware:
+    image: dockware/essentials:latest
+    container_name: shop
+    ports:
+      - "80:80"
+      - "22:22"
+      - "3306:3306"
+    volumes:
+      - "db_volume:/var/lib/mysql"
+      - "./src:/var/www/html"
+      # excludes
+      # - '/var/www/html/vendor'
+
+volumes:
+  db_volume:
+    driver: local
