@@ -26,6 +26,7 @@ run: ## Prepares and runs Shopware
 	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html -R'
 	# ------------------------------------------------------------------------------------
 	docker exec -it shop bash -c 'composer install'
+	docker exec -it shop bash -c 'php bin/console theme:dump'
 	docker exec -it shop bash -c 'php bin/console theme:compile'
 	docker exec -it shop bash -c 'php bin/console cache:clear'
 	@open http://localhost/admin
