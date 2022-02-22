@@ -20,6 +20,10 @@ prod: ## Installs PROD dependencies
 clean: ## Cleans all Dependencies
 	rm -rf vendor/*
 
+dump: ## Dumps CI configurations
+	php bin/console bundle:dump
+	php bin/console theme:dump
+
 build-storefront: ## Builds the Storefront
 	php bin/console theme:compile
 	php bin/console cache:clear
