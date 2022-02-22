@@ -26,6 +26,8 @@ Navigate to the project folder and run this command (if you have Docker already 
 docker-compose up -d
 ```
 
+
+
 After the image has been downloaded and started, you should be able to see a Shopware 6 shop when you navigate to
 `http://localhost` in your browser.
 
