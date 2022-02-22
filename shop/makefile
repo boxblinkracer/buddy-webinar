@@ -15,19 +15,21 @@ import-db: ## Restores the Database from the clean dump
 	@echo "\n  >> creating database..."
 	docker exec -i shop bash -c "mysql -uroot -proot -e \"drop database shopware;\"" 2> /dev/null; true
 	docker exec -i shop bash -c "mysql -uroot -proot -e \"create database shopware;\"" 2> /dev/null; true
-	docker exec -i shop mysql -uroot -proot shopware < ./shop.sql
+	docker exec -i shop mysql -uroot -proot shopware < ./shop_full.sql
 
 export-db: ## Creates a clean MySQL dump
-	@docker exec -i shop mysqldump -u root -proot --lock-tables shopware > ./shop.sql
+	@docker exec -i db mysqldump -u root -proot --lock-tables shopware > ./shop.sql
 
 # ---------------------------------------------------------------------------------------------
 
 run: ## Prepares and runs Shopware
 	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html -R'
 	# ------------------------------------------------------------------------------------
-	docker exec -it shop bash -c 'composer install'
-	docker exec -it shop bash -c 'php bin/console theme:dump'
-	docker exec -it shop bash -c 'php bin/console theme:compile'
+	docker exec -it shop bash -c 'make prod'
+	docker exec -it shop bash -c 'make dump -B'
+	docker exec -it shop bash -c 'make build-storefront -B'
+	docker exec -it shop bash -c 'make build-admin -B'
+	docker exec -it shop bash -c 'php bin/console sales-channel:update:domain localhost'
 	docker exec -it shop bash -c 'php bin/console cache:clear'
 	# ------------------------------------------------------------------------------------
 	docker exec -it shop bash -c 'php bin/console plugin:refresh'
