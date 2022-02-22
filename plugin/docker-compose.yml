@@ -5,5 +5,10 @@ services:
   shop:
     image: dockware/flex:latest
     container_name: plugin
+    ports:
+      - "80:80"
+      - "22:22"
+      - "3306:3306"
+      - "9998:9998"
     volumes:
-      - '.:/var/www/html'
+      - './src:/var/www/html/custom/plugins/DockwareSamplePlugin'

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["dockware-sample-plugin"],{YHGw:function(n,o){console.log("test")}},[["YHGw","runtime"]]]);

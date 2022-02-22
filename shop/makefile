@@ -23,6 +23,8 @@ export-db: ## Creates a clean MySQL dump
 # ---------------------------------------------------------------------------------------------
 
 run: ## Prepares and runs Shopware
+	make import-db -B
+	# ------------------------------------------------------------------------------------
 	docker exec -it shop bash -c 'sudo chown www-data:www-data /var/www/html -R'
 	# ------------------------------------------------------------------------------------
 	docker exec -it shop bash -c 'make prod'

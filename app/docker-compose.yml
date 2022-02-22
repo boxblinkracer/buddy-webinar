@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+
+  app:
+    image: dockware/flex:latest
+    container_name: app
+    ports:
+      - "80:80"
+    volumes:
+      - "./src:/var/www/html"
