@@ -23,7 +23,7 @@ class Subscriber implements EventSubscriberInterface
      */
     public function onStorefrontRender(StorefrontRenderEvent $event)
     {
-        echo "Buddy was here!";
+        echo "Buddy was here again!";
     }
 
 }
