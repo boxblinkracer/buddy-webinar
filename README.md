@@ -1,9 +1,7 @@
 <p align="center">
    <img width="200px" src="/assets/buddy.png">
 </p>
-<h1 align="center">Buddy Webinar - E-Commerce Automation for DevOps Pros</h1>
-<h2 align="center">Pipelines with Buddy and Shopware 6</h2>
-
+<h1 align="center">E-Commerce Automation for DevOps Pros with Shopware 6 and Buddy</h1>
 
 
 
